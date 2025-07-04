@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevGuide</title>
+    <link rel="stylesheet" href="dev.css">
+</head>
+<body>
+<button class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+<!-- Navigation Menu at the very top -->
+<header class="top-menu">
+    <h1>DevGuide</h1>
+    <nav class="top-nav">
+        <div class="dropdown">
+            <a href="#" class="dropdown-link">Направления разработки</a>
+            <div class="left-sliders">
+                <a href="web-dev.html" class="slider-item" data-target="web">Веб-разработка</a>
+                <a href="mobile-dev.html" class="slider-item" data-target="mobile">Мобильная разработка</a>
+                <a href="desktop-dev.html" class="slider-item" data-target="desktop">Настольная разработка</a>
+                <a href="game-dev.html" class="slider-item" data-target="games">Разработка игр</a>
+                <a href="ai-dev.html" class="slider-item" data-target="ai">Машинное обучение и ИИ</a>
+                <a href="blockchain-dev.html" class="slider-item" data-target="blockchain">Блокчейн</a>
+            </div>
+        </div>
+        <a href="lang_program.html">Языки программирования</a>
+        <a href="test.html">Тест</a>
+        <a href="choose_lang_program.html">Выбрать языки программирования</a>
+        <a href="for_study.html">Образовательные ресурсы</a>
+    </nav>
+    <div class="tooltip" id="tooltip"></div> <!-- Tooltip for displaying info -->
+</header>
+
+<!-- Slider Section (separate from the navigation menu) -->
+<section class="slider-container">
+    <div class="right-sliders">
+        <div class="slider-content" id="web">
+            <p>Разработка веб-сайтов и веб-приложений</p>
+        </div>
+        <div class="slider-content" id="mobile">
+            <p>Создание приложений для мобильных устройств на платформах iOS и Android.</p>
+        </div>
+        <div class="slider-content" id="desktop">
+            <p>Разработка приложений для настольных операционных систем, таких как Windows, macOS и Linux.</p>
+        </div>
+        <div class="slider-content" id="games">
+            <p>Создание игр для разных платформ, включая ПК, консоли и мобильные устройства.</p>
+        </div>
+        <div class="slider-content" id="ai">
+            <p>Создание и внедрение алгоритмов искусственного интеллекта и машинного обучения.</p>
+        </div>
+        <div class="slider-content" id="blockchain">
+            <p>Разработка на базе блокчейн-технологий для создания децентрализованных приложений (dApps)</p>
+        </div>
+    </div>
+</section>
+<!-- Introductory Text -->
+<section class="intro">
+    <h2>Добро пожаловать в DevGuide!</h2>
+    <p>На нашем сайте вы сможете ознакомиться с основными направлениями разработки, языками программирования, а также ресурсами для обучения. Мы предлагаем вам полезную информацию для повышения ваших знаний и навыков в области программирования. Исследуйте разделы ниже и начните свое путешествие в мир технологий!</p>
+</section>
+
+<!-- Form Container -->
+<div class="form-container">
+    <div class="form-card" id="form-1">
+        <h2>Направления разработки</h2>
+        <p>В этом разделе вы познакомитесь с основными направлениями разработки в программмировании, такими как веб-разработка, мобильная разработка, создание игр и другие.</p>
+    </div>
+    <div class="form-card" id="form-2">
+        <h2>Языки программирования</h2>
+        <p>Этот раздел посвящен языкам программирования, которые используются для создания приложений и систем, включая Python, Java, C#, и другие.</p>
+    </div>
+    <div class="form-card" id="form-3">
+        <h2>Тест по материалу</h2>
+        <p>Здесь вы найдете тесты для проверки и закрепления ваших знаний по различным языкам программирования.</p>
+    </div>
+  <div class="form-card" id="form-4">
+        <h2>Опрос по выбору языков </h2>
+        <p>Пройдите опрос и узнайте какие языки программирования вам подохдят для создания своих программ.</p>
+    </div>
+    <div class="form-card" id="form-5">
+        <h2>Образовательные ресурсы</h2>
+        <p>Этот раздел содержит ссылки на полезные образовательные ресурсы.</p>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2024 DevGuide. Все права защищены.</p>
+</footer>
+
+<script src="dev.js"></script>
+</body>
+</html>

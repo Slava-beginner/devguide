@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Теоретические основы</title>
+      <link rel="icon" href="https://cdn.glitch.global/7c5bfd96-c6cb-4437-8495-9c6685ab23cb/favicon-32x32.png?v=1745089339521" type="image/x-icon">
+  <link rel="stylesheet" href="begin.css">
+</head>
+<body>
+
+  <div class="container">
+    <header class="top-menu">
+    <button class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+    
+    <nav class="sidebar" id="sidebar">
+        <div class="menu-item" onclick="toggleMenu('basic')">Раздел 1: Основы программирования</div>
+        <div class="submenu" id="basic">
+            <a href="begin.html">Теоретические основы</a>
+            <a href="types of languages.html">Классификация языков программирования</a>
+            <a href="https://cdn.glitch.global/7c5bfd96-c6cb-4437-8495-9c6685ab23cb/%D0%A2%D0%B5%D1%80%D0%BC%D0%B8%D0%BD%D1%8B%20%D0%BF%D0%BE%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8E.docx?v=1741513676779" download>Основные определения</a>
+            <a href="begin_task.html">Задания</a>
+        </div>
+        <div class="menu-item" onclick="toggleMenu('dev')">Раздел 2: Направления разработки</div>
+        <div class="submenu" id="dev">
+            <a href="web-dev.html">Веб-разработка</a>
+            <a href="mobile-dev.html">Мобильная разработка</a>
+            <a href="desktop-dev.html">Настольная разработка</a>
+            <a href="game-dev.html">Разработка игр</a>
+            <a href="ai-dev.html">Машинное обучение и ИИ</a>
+            <a href="begin_task_1.html">Задания</a>
+        </div>
+        <div class="menu-item" onclick="toggleMenu('languages')">Раздел 3: Языки программирования</div>
+        <div class="submenu" id="languages">
+            <a href="lang_program.html">Языки программирования</a>
+            <a href="test.html">Тест по языкам</a>
+            <a href="begin_task_2.html">Задание</a>
+        </div>
+        <div class="menu-item" onclick="toggleMenu('choose')">Раздел 4: Выбор языков программирования</div>
+        <div class="submenu" id="choose">
+			<a href="how choose.html">Как выбрать соответсвующий язык</a>
+      <a href="opros lang.html">Опрос по выбору языков</a>
+        </div>
+        <div class="menu-item" onclick="toggleMenu('resources')">Раздел 5: Образовательные ресурсы</div>
+        <div class="submenu" id="resources">
+            <a href="for_study.html">Полезные материалы</a>
+        </div>
+    </nav>
+</header>
+    <h1>
+      Выполните задание на выбор
+    </h1>
+    <h1>Задание 1</h1>
+    <p>
+       Используя графический редактор (Adode Photoshop, Figma, Paint) или ручку с бумагой, нарисуйте структуру сайта (шапка, меню, контент, подвал) с объектами (текст, поле ввода, кнопки, картинки и др.). Подпишите отдельно какие языки за какую часть будут отвечать и как.
+    </p>
+    <h1>
+      Задание 2 </h1>
+    <p>
+      Почему стоит разделять некоторые языки программирования при разработке программ, приложений для операционных систем IOS/Android? В чём преимущество и недостаток каждой из ОС, которые упрощают ил усложняют процесс разработки?
+    </p>
+    <h1>
+      Задание 3
+    </h1>
+    <p>
+      Предложите идею приложения на компьютер. Какой язык программирования наиболее для этого подходит?
+    </p>
+    <h1>
+      Задание 4
+    </h1>
+    <p>
+      Опишите идею игры, которую вы хотите реализовать и процесс его создания. Выберите подходящий движок с языком программирования, объяснив выбор.
+    </p>
+    <h1>
+      Задание 5
+    </h1>
+    <p>
+      Приведите 2-3 примера задач машинного обучения (распознавание изображений, анализ текста). Поделитесь мнением касательного того, почему Python или Java подходит для машинного обучения и развития ИИ.
+    </p>
+  <button onclick="showSection(2)" class="download-button">Выполнить задание</button>
+<form class="section" id="section2">
+    <h2>Ответ на раздел 2</h2>
+    <input type="text" placeholder="ФИО" required class="fio">
+    <input type="text" placeholder="Группа" required class="group">
+    <textarea placeholder="Ответ" required class="text"></textarea>
+    <div class="file-input">
+  <label class="download-button">
+    Выбрать файл
+    <input type="file" class="file" hidden>
+  </label>
+   <div class="file-info" style="display: none;"></div>
+</div>
+  
+    <button type="button" onclick="submitForm(2)" class="download-button">Отправить</button>
+  </form>
+<script>
+  
+    document.getElementById("hamburger").addEventListener("click", function() {
+        document.getElementById("sidebar").classList.toggle("active");
+    });
+
+    function toggleMenu(id) {
+        let submenu = document.getElementById(id);
+        let allSubmenus = document.querySelectorAll(".submenu");
+
+        allSubmenus.forEach(menu => {
+            if (menu !== submenu) {
+                menu.style.display = "none";
+            }
+        });
+
+        submenu.style.display = submenu.style.display === "block" ? "none" : "block";
+    }
+
+    let cards = document.querySelectorAll(".form-card");
+    let currentIndex = 0;
+
+    function showNextCard() {
+        cards[currentIndex].classList.remove("active");
+        currentIndex = (currentIndex + 1) % cards.length;
+        cards[currentIndex].classList.add("active");
+    }
+
+    setInterval(showNextCard, 6000);
+  
+const scriptUrl = "https://script.google.com/macros/s/AKfycby5ohrYWfONyuBIV2Ll_SEE4RmFGdEuWZP2e5sn8gbrlQUS8zYdtDSli971eTZMmS3bJg/exec";
+    
+    // Показ нужного раздела
+    function showSection(sectionNum) {
+      document.querySelectorAll('.section').forEach(el => {
+        el.classList.remove('active');
+        el.querySelectorAll('input').forEach(input => input.classList.remove('error'));
+      });
+      document.getElementById(`section${sectionNum}`).classList.add('active');
+    }
+
+    // Валидация полей
+    function validateForm(form) {
+      let isValid = true;
+      form.querySelectorAll('[required]').forEach(input => {
+        if (!input.value.trim()) {
+          input.classList.add('error');
+          isValid = false;
+        } else {
+          input.classList.remove('error');
+        }
+      });
+      return isValid;
+    }
+
+    // Отправка данных
+    async function submitForm(sectionNum) {
+      const form = document.getElementById(`section${sectionNum}`);
+      
+      if (!validateForm(form)) {
+        alert("Заполните все обязательные поля (помечены *)!");
+        return;
+      }
+
+      const fio = form.querySelector('.fio').value.trim();
+      const group = form.querySelector('.group').value.trim();
+      const text = form.querySelector('.text').value.trim();
+      const file = form.querySelector('.file').files[0];
+
+      const formData = new FormData();
+      formData.append("fio", fio);
+      formData.append("group", group);
+      formData.append("section", sectionNum.toString()); // Важно: передаём как строку!
+      formData.append("text", text);
+
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = (e) => {
+          formData.append("fileData", e.target.result.split(',')[1]); // Только base64
+          formData.append("fileName", file.name);
+          formData.append("mimeType", file.type);
+          sendToGoogleScript(formData);
+        };
+        reader.readAsDataURL(file);
+      } else {
+        sendToGoogleScript(formData);
+      }
+    }
+
+    // Отправка на Google Apps Script
+    async function sendToGoogleScript(formData) {
+      try {
+        const response = await fetch(scriptUrl, {
+          method: "POST",
+          body: new URLSearchParams(formData),
+          redirect: "follow"
+        });
+        
+        const result = await response.text();
+        alert(result.includes("Ошибка") ? result : "✅ Ответ успешно отправлен!");
+      } catch (err) {
+        alert("⛔ Ошибка сети: " + err.message);
+      }
+    }
+document.querySelectorAll('.file-input input[type="file"]').forEach(input => {
+  input.addEventListener('change', function(e) {
+    const infoBlock = this.parentElement.nextElementSibling;
+    
+    if(this.files.length > 0) {
+      const file = this.files[0];
+      const parts = file.name.split('.');
+      const name = parts.slice(0, -1).join('.');
+      const ext = parts.length > 1 ? `.${parts.pop()}` : '';
+      
+      infoBlock.innerHTML = `Выбран файл: <b>${name}</b><i>${ext}</i>`;
+      infoBlock.style.display = 'block';
+    } else {
+      infoBlock.innerHTML = '';
+      infoBlock.style.display = 'none';
+    }
+  });
+});
+</script>
+  </div>
+</body>
+</html>

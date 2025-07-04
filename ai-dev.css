@@ -1,0 +1,187 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Calibri, sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.back-button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 1.5rem;
+}
+
+.back-button:hover {
+    background-color: #666;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+p {
+    font-size: 20px;
+    line-height: 1.6;
+    color: #555;
+}
+
+ul {
+    font-family: Calibri, sans-serif; /* Настроенный шрифт */
+    font-size: 20px;
+    color: #333; /* Цвет текста */
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+li {
+    margin-bottom: 0.5rem; /* Отступ между пунктами списка */
+    padding-left: 1rem; /* Внутренний отступ */
+    position: relative;
+    font-size: 20px;
+}
+
+ol {
+  font-family: Arial, sans-serif; /* Настроенный шрифт */
+    font-size: 20px;
+    color: #333; /* Цвет текста */
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+
+
+section {
+    margin-bottom: 20px;
+}
+
+
+.back-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  color: #fff;
+  background-color: #333;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.back-button:hover {
+  background-color: #555;
+}
+
+.tooltip-container {
+    position: relative;
+    padding: 10px;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    margin: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tooltip-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.tooltip-container::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    font-size: 12px;
+}
+
+.tooltip-container:hover::after {
+    opacity: 1;
+}
+
+/* Стили для секции сравнения ML и DL */
+.comparison-section {
+    display: flex;
+    align-items: flex-start;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+.column {
+    width: 45%;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 20px;
+}
+
+.separator {
+    width: 1px;
+    background-color: #333;
+    height: auto;
+    margin: 0 10px;
+}
+
+.column h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.column ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+.column li {
+    margin-bottom: 10px;
+}
+
+
+
+.card {
+    flex: 1 1 calc(45% - 1rem);
+    padding: 1rem;
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.3s;
+    font-size: 20px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    background-color: #eaeaea;
+}

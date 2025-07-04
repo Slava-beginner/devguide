@@ -1,0 +1,119 @@
+body {
+    font-family: Calibri, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.content {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    color: #333;
+}
+
+p {
+    font-size: 20px;
+    line-height: 1.6;
+    color: #555;
+}
+
+ul {
+    font-family: Calibri, sans-serif; /* Настроенный шрифт */
+    font-size: 20px;
+    color: #333; /* Цвет текста */
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+li {
+    margin-bottom: 0.5rem; /* Отступ между пунктами списка */
+    padding-left: 1rem; /* Внутренний отступ */
+    position: relative;
+    font-size: 20px;
+}
+
+ol {
+    font-family: Calibri, sans-serif; /* Настроенный шрифт */
+    font-size: 20px;
+    color: #333; /* Цвет текста */
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+
+
+.content {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+.back-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  color: #fff;
+  background-color: #333;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  font-size: 20px;
+}
+
+.back-button:hover {
+  background-color: #555;
+}
+
+
+h1 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.section {
+    margin-top: 20px;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    font-size: 20px;
+}
+
+.card {
+    flex: 1 1 calc(45% - 1rem);
+    padding: 1rem;
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.3s;
+    font-size: 20px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    background-color: #eaeaea;
+}
+
+.tooltip {
+    position: absolute;
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 20px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s;
+}

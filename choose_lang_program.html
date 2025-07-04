@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="choose_lang_program.css">
+      <link rel="icon" href="https://cdn.glitch.global/7c5bfd96-c6cb-4437-8495-9c6685ab23cb/favicon-32x32.png?v=1745089339521" type="image/x-icon">
+    <title>Опрос по выбору языков программирования</title>
+</head>
+<body>
+    <div class="container">
+        <div id="survey">
+            <div id="general-question">
+                <h2>Что вы хотите создать?</h2>
+                <button class="option-button" onclick="showQuestions('web')">Сайт</button>
+                <button class="option-button" onclick="showQuestions('desktop')">Программу для компьютера</button>
+                <button class="option-button" onclick="showQuestions('mobile')">Приложение для телефона</button>
+                <button class="option-button" onclick="showQuestions('game')">Игру</button>
+                <button class="option-button" onclick="showQuestions('ml')">Обученный искусственный интлект</button>
+                <button class="option-button" onclick="showQuestions('blockchain')">Приложение на основе блокчёйна</button>
+            </div>
+
+            <!-- Веб-разработка (Сайт) -->
+            <div id="web-questions" class="questions" style="display:none;">
+                <h2>Веб-разработка (Сайт)</h2>
+                <div class="question" id="web-question-1" style="display:block;">
+                    <p>1. Какой функционал должен быть у вашего сайта?</p>
+                    <label class="option-button"><input type="checkbox" value="HTML"> Простой макет с текстом и изображениями.</label>
+                    <label class="option-button"><input type="checkbox" value="JavaScript"> Интерактивные элементы (формы, кнопки, анимации).</label>
+                    <label class="option-button"><input type="checkbox" value="PHP"> Работа с базами данных (сохранение и обработка данных).</label>
+                    <button onclick="nextQuestion('web', 1)">Далее</button>
+                </div>
+                <div class="question" id="web-question-2" style="display:none;">
+                    <p>2. Ваш сайт должен хорошо работать на мобильных устройствах?</p>
+                    <label class="option-button"><input type="radio" name="mobile-design" value="HTML, CSS"> Да, адаптивный дизайн обязателен.</label>
+                    <label class="option-button"><input type="radio" name="mobile-design" value="HTML"> Нет, важно только для компьютеров.</label>
+                    <button onclick="nextQuestion('web', 2)">Далее</button>
+                </div>
+                <div class="question" id="web-question-3" style="display:none;">
+                    <p>3. Планируете ли вы реализовать на сайте сложные элементы?</p>
+                    <label class="option-button"><input type="radio" name="interactivity" value="JavaScript"> Да, такие как чаты, интерактивные карты, или фильтры.</label>
+                    <label class="option-button"><input type="radio" name="interactivity" value="HTML"> Нет, достаточно простых функций, например, формы обратной связи.</label>
+                    <button onclick="nextQuestion('web', 3)">Далее</button>
+                </div>
+                <div class="question" id="web-question-4" style="display:none;">
+                    <p>4. Нужна ли интеграция с сервером или базой данных?</p>
+                    <label class="option-button"><input type="radio" name="server-integration" value="PHP, SQL"> Да, для сохранения данных пользователей.</label>
+                    <label class="option-button"><input type="radio" name="server-integration" value="none"> Нет, сервер не требуется.</label>
+                    <button onclick="nextQuestion('web', 4)">Далее</button>
+                </div>
+                <div class="question" id="web-question-5" style="display:none;">
+                    <p>5. Какую основную задачу будет выполнять ваш сайт?</p>
+                    <label class="option-button"><input type="radio" name="main-task" value="HTML"> Демонстрация информации (например, портфолио или блог).</label>
+                    <label class="option-button"><input type="radio" name="main-task" value="JavaScript"> Взаимодействие с пользователями (личный кабинет, комментарии).</label>
+                    <label class="option-button"><input type="radio" name="main-task" value="PHP"> Продажа товаров или услуг (интернет-магазин).</label>
+                    <button onclick="nextQuestion('web', 5)">Далее</button>
+                </div>
+                <div class="question" id="web-question-6" style="display:none;">
+                    <p>6. Нужна ли на сайте сложная логика?</p>
+                    <label class="option-button"><input type="radio" name="complexity" value="JavaScript"> Да, например, расчетные формы или автоматическая генерация данных.</label>
+                    <label class="option-button"><input type="radio" name="complexity" value="HTML"> Нет, сайт будет выполнять только базовые функции.</label>
+                    <button onclick="nextQuestion('web', 6)">Далее</button>
+                </div>
+                <div class="question" id="web-question-7" style="display:none;">
+                    <p>7. Будут ли на сайте использоваться сторонние сервисы и API?</p>
+                    <label class="option-button"><input type="radio" name="external-services" value="JavaScript"> Да, активно.</label>
+                    <label class="option-button"><input type="radio" name="external-services" value="HTML"> Нет, сайт будет работать автономно.</label>
+                    <button onclick="nextQuestion('web', 7)">Далее</button>
+                </div>
+                <div class="question" id="web-question-8" style="display:none;">
+                    <p>8. Кто будет управлять контентом на сайте?</p>
+                    <label class="option-button"><input type="radio" name="content-management" value="HTML"> Я сам, без технических знаний.</label>
+                    <label class="option-button"><input type="radio" name="content-management" value="PHP"> Команда разработчиков или специалист.</label>
+                    <button onclick="nextQuestion('web', 8)">Далее</button>
+                </div>
+                <div class="question" id="web-question-9" style="display:none;">
+                    <p>9. Какой объем страниц планируется?</p>
+                    <label class="option-button"><input type="radio" name="page-volume" value="HTML"> 1–5 (лендинг).</label>
+                    <label class="option-button"><input type="radio" name="page-volume" value="PHP, HTML"> 6–20 (средний сайт, блог).</label>
+                    <label class="option-button"><input type="radio" name="page-volume" value="Python"> Более 20 (крупный проект).</label>
+                    <button onclick="nextQuestion('web', 9)">Далее</button>
+                </div>
+                <div class="question" id="web-question-10" style="display:none;">
+                    <p>10. Нужна ли сложная архитектура сайта?</p>
+                    <label class="option-button"><input type="radio" name="architecture" value="PHP, Python"> Да, сайт должен быть масштабируемым.</label>
+                    <label class="option-button"><input type="radio" name="architecture" value="HTML"> Нет, достаточно простой структуры.</label>
+                    <button onclick="nextQuestion('web', 10)">Далее</button>
+                </div>
+            </div>
+
+            <!-- Разработка программ для компьютера -->
+            <div id="desktop-questions" class="questions" style="display:none;">
+                <h2>Разработка программ для компьютера</h2>
+                <div class="question" id="desktop-question-1" style="display:block;">
+                    <p>1. Какую задачу будет решать ваша программа?</p>
+                    <label class="option-button"><input type="checkbox" value="C#"> Автоматизация повседневных задач.</label><br>
+                    <label class="option-button"><input type="checkbox" value="Python"> Работа с большими объемами данных.</label><br>
+                    <label class="option-button"><input type="checkbox" value="C++"> Визуализация и обработка графики.</label><br>
+                    <label class="option-button"><input type="checkbox" value="C#, C++"> Создание утилит или системного ПО.</label><br>
+                    <button onclick="nextQuestion('desktop', 1)">Далее</button>
+                </div>
+                <div class="question" id="desktop-question-2" style="display:none;">
+                    <p>2. Нужен ли вашей программе графический интерфейс?</p>
+                    <label class="option-button"><input type="radio" name="desktop-gui" value="C#"> Да, требуется удобный пользовательский интерфейс.</label><br>
+                    <label class="option-button"><input type="radio" name="desktop-gui" value="Python, C++"> Нет, достаточно командной строки.</label><br>
+                    <button onclick="nextQuestion('desktop', 2)">Далее</button>
+                </div>
+                <div class="question" id="desktop-question-3" style="display:none;">
+                    <p>3. На какой платформе должна работать программа?</p>
+                    <label class="option-button"><input type="radio" name="platform-desktop" value="C#"> Windows.</label><br>
+                    <label class="option-button"><input type="radio" name="platform-desktop" value="C++"> Linux.</label><br>
+                    <label class="option-button"><input type="radio" name="platform-desktop" value="C++"> MacOS.</label><br>
+                    <label class="option-button"><input type="radio" name="platform-desktop" value="C#, C++"> Кроссплатформенность (работа на всех платформах).</label><br>
+                    <button onclick="nextQuestion('desktop', 3)">Далее</button>
+                </div>
+                <div class="question" id="desktop-question-4" style="display:none;">
+                    <p>4. Какую нагрузку должна выдерживать программа?</p>
+                    <label class="option-button"><input type="radio" name="load-desktop" value="C++"> Низкую (не требовательна к ресурсам).</label><br>
+                    <label class="option-button"><input type="radio" name="load-desktop" value="Python"> Среднюю (умеренная нагрузка на процессор/память).</label><br>
+                    <label class="option-button"><input type="radio" name="load-desktop" value="C#, C++"> Высокую (интенсивные вычисления или обработка данных).</label><br>
+                    <button onclick="nextQuestion('desktop', 4)">Далее</button>
+                </div>
+                <div class="question" id="desktop-question-5" style="display:none;">
+                    <p>5. Должна ли программа работать с файлами?</p>
+                    <label class="option-button"><input type="radio" name="files-desktop" value="Python, C++, C#"> Да, программа должна читать, записывать и обрабатывать файлы.</label><br>
+                    <label class="option-button"><input type="radio" name="files-desktop" value="C#, Python"> Нет, работа с файлами не предусмотрена.</label><br>
+                    <button onclick="nextQuestion('desktop', 5)">Далее</button>
+                </div>
+                <div class="question" id="desktop-question-6" style="display:none;">
+                    <p>6. Нужна ли поддержка многозадачности или многопоточности?</p>
+                    <label class="option-button"><input type="radio" name="multithreading-desktop" value="C#"> Да, программа должна выполнять несколько задач одновременно.</label><br>
+                    <label class="option-button"><input type="radio" name="multithreading-desktop" value="Python"> Нет, достаточно однопоточной работы.</label><br>
+                    <button onclick="nextQuestion('desktop', 6)">Далее</button>
+                </div>
+                <div class="question" id="desktop-question-7" style="display:none;">
+                    <p>7. Какая роль пользовательского интерфейса важна для программы?</p>
+                    <label class="option-button"><input type="radio" name="user-experience" value="Python, C++"> Простой интерфейс с минимальными элементами.</label><br>
+                    <label class="option-button"><input type="radio" name="user-experience" value="C++, Java"> Функциональный интерфейс с настройками.</label><br>
+					<label class="option-button"><input type="radio" name="user-experience" value="C#, JavaScript"> НПолноценный GUI с визуальными эффектами.</label><br>
+					
+                    <button onclick="nextQuestion('desktop', 7)">Далее</button>
+                </div>
+                <div class="question" id="desktop-question-8" style="display:none;">
+                    <p>8. Какого объема вычисления должна выполнять программа?</p>
+                    <label class="option-button"><input type="radio" name="computation-volume" value="C++"> Простейшие операции.</label><br>
+                    <label class="option-button"><input type="radio" name="computation-volume" value="Python"> Анализ данных или сложные алгоритмы.</label><br>
+                    <label class="option-button"><input type="radio" name="computation-volume" value="C#, Python"> Высокопроизводительные расчеты.</label><br>
+                    <button onclick="nextQuestion('desktop', 8)">Далее</button>
+                </div>
+                <div class="question" id="desktop-question-9" style="display:none;">
+                    <p>9. Нужна ли интеграция с другими приложениями?</p>
+                    <label class="option-button"><input type="radio" name="integration-desktop" value="Python, C++"> Да, интеграция обязательна.</label><br>
+                    <label class="option-button"><input type="radio" name="integration-desktop" value="Python, C#"> Нет, программа будет работать автономно.</label><br>
+                    <button onclick="nextQuestion('desktop', 9)">Далее</button>
+                </div>
+                <div class="question" id="desktop-question-10" style="display:none;">
+                    <p>10. Нужна ли программа для работы в локальной сети?</p>
+                    <label class="option-button"><input type="radio" name="internet-desktop" value="Java, Python"> Да, программа будет взаимодействовать с устройствами в сети.</label><br>
+                    <label class="option-button"><input type="radio" name="internet-desktop" value="C++, Python"> Нет, она предназначена только для локального использования.</label><br>
+                    <button onclick="nextQuestion('desktop', 10)">Далее</button>
+                </div>
+            </div>
+
+            <!-- Разработка мобильных приложений -->
+            <div id="mobile-questions" class="questions" style="display:none;">
+                <h2>Разработка мобильных приложений</h2>
+                <div class="question" id="mobile-question-1" style="display:block;">
+                    <p>1. Какое приложение вы хотите создать?</p>
+                    <label class="option-button"><input type="checkbox" value="Java"> Приложение с простой функциональностью.</label><br>
+                    <label class="option-button"><input type="checkbox" value="C++"> Мультимедийное приложение (видео, аудио).</label><br>
+                    <label class="option-button"><input type="checkbox" value="C#, Java"> Приложение для работы с данными.</label><br>
+                    <label class="option-button"><input type="checkbox" value="C++, Java"> Игра для мобильных устройств.</label><br>
+                    <button onclick="nextQuestion('mobile', 1)">Далее</button>
+                </div>
+                <div class="question" id="mobile-question-2" style="display:none;">
+                    <p>2. Для какой платформы будет предназначено приложение?</p>
+                    <label class="option-button"><input type="radio" name="platform-mobile" value="Java, C#"> Android.</label><br>
+                    <label class="option-button"><input type="radio" name="platform-mobile" value="Java"> iOS.</label><br>
+                    <label class="option-button"><input type="radio" name="platform-mobile" value="Java, C#"> Кроссплатформенное приложение (работа на обоих платформах).</label><br>
+                    <button onclick="nextQuestion('mobile', 2)">Далее</button>
+                </div>
+                <div class="question" id="mobile-question-3" style="display:none;">
+                    <p>3. Какое значение для вас имеет производительность приложения?</p>
+                    <label class="option-button"><input type="radio" name="performance-mobile" value="Java, C++"> Высокая производительность для ресурсоемких задач.</label><br>
+                    <label class="option-button"><input type="radio" name="performance-mobile" value="Java, Python"> Умеренная, достаточно средней производительности.</label><br>
+                    <label class="option-button"><input type="radio" name="performance-mobile" value="Python, C#"> Низкая, подойдет базовый функционал.</label><br>
+                    <button onclick="nextQuestion('mobile', 3)">Далее</button>
+                </div>
+                <div class="question" id="mobile-question-4" style="display:none;">
+                    <p>4. Нужен ли вашему приложению графический интерфейс?</p>
+                    <label class="option-button"><input type="radio" name="gui-mobile" value="Java, C#"> Да, с элементами пользовательского дизайна.</label><br>
+                    <label class="option-button"><input type="radio" name="gui-mobile" value="C++, Java"> Нет, графический интерфейс не нужен.</label><br>
+                    <button onclick="nextQuestion('mobile', 4)">Далее</button>
+                </div>
+                <div class="question" id="mobile-question-5" style="display:none;">
+                    <p>5. Какую ключевую задачу должно решать ваше приложение?</p>
+                    <label class="option-button"><input type="radio" name="internet-mobile" value="Java, C#"> Помощь в повседневной жизни (органайзер, напоминания)..</label><br>
+                    <label class="option-button"><input type="radio" name="internet-mobile" value="Java, JavaScript"> Социальные функции (общение, контакты).</label><br>
+                    <button onclick="nextQuestion('mobile', 5)">Далее</button>
+                </div>
+                <div class="question" id="mobile-question-6" style="display:none;">
+                    <p>6. Нужна ли поддержка сложной логики или расчетов?</p>
+                    <label class="option-button"><input type="radio" name="complexity-mobile" value="yes"> Да, потребуется сложная бизнес-логика или вычисления.</label><br>
+                    <label class="option-button"><input type="radio" name="complexity-mobile" value="no"> Нет, логика будет простой.</label><br>
+                    <button onclick="nextQuestion('mobile', 6)">Далее</button>
+                </div>
+                <div class="question" id="mobile-question-7" style="display:none;">
+                    <p>7. Нужно ли вашему приложению взаимодействовать с базами данных?</p>
+                    <label class="option-button"><input type="radio" name="distribution" value="Java, SQL"> Да, приложение будет хранить и обрабатывать данные пользователей..</label><br>
+                    <label class="option-button"><input type="radio" name="distribution" value="Java"> Нет, данные будут храниться локально на устройстве. </label><br>
+                    <button onclick="nextQuestion('mobile', 7)">Далее</button>
+                </div>
+                <div class="question" id="mobile-question-8" style="display:none;">
+                    <p>8. Будет ли приложение включать анимации или сложную графику?</p>
+                    <label class="option-button"><input type="radio" name="graphics" value="C++, C#"> Да, нужны качественные анимации и графика.</label><br>
+                    <label class="option-button"><input type="radio" name="graphics" value="Java"> Нет, анимации и сложная графика не требуются.</label><br>
+                    <button onclick="nextQuestion('mobile', 8)">Далее</button>
+                </div>
+                <div class="question" id="mobile-question-9" style="display:none;">
+                    <p>9. Планируете ли использовать систему монетизации?</p>
+                    <label class="option-button"><input type="radio" name="libraries" value="Python, C++"> Нет, приложение будет бесплатным.</label><br>
+                    <label class="option-button"><input type="radio" name="libraries" value="Java, C#"> Да, покупка встроенных функций</label><br>
+                    <button onclick="nextQuestion('mobile', 9)">Далее</button>
+                </div>
+                <div class="question" id="mobile-question-10" style="display:none;">
+                    <p>10.  Какая целевая аудитория у приложения?</p>
+                    <label class="option-button"><input type="radio" name="app-role" value="Java"> Широкий круг пользователей</label><br>
+                    <label class="option-button"><input type="radio" name="app-role" value="C++, Python"> Специалисты узкой области</label><br>
+                    <button onclick="nextQuestion('mobile', 10)">Далее</button>
+                </div>
+            </div>
+
+            <!-- Разработка игр -->
+            <div id="game-questions" class="questions" style="display:none;">
+                <h2>Разработка игр</h2>
+                <div class="question" id="game-question-1" style="display:block;">
+                    <p>1. "Какие основные механики должны быть в игре</p>
+                    <label class="option-button"><input type="radio" value="Python"> Простые действия, такие как прыжки или движение персонажа.</label><br>
+                    <label class="option-button"><input type="radio" value="C#, C++"> Реалистичная физика, столкновения или взаимодействие объектов.</label><br>
+                    <label class="option-button"><input type="radio" value="C++, C#"> Мультиплеерные функции.</label><br>
+                    <button onclick="nextQuestion('game', 1)">Далее</button>
+                </div>
+                <div class="question" id="game-question-2" style="display:none;">
+                    <p>2. На каких устройствах будет доступна игра?</p>
+                    <label class="option-button"><input type="radio" name="platform-game" value="C#, C++"> ПК.</label><br>
+                    <label class="option-button"><input type="radio" name="platform-game" value="Java, C#"> Мобильные устройства.</label><br>
+                    <label class="option-button"><input type="radio" name="platform-game" value="C++"> Консоли.</label><br>
+                    <label class="option-button"><input type="radio" name="platform-game" value="C++, C#"> Кроссплатформенная игра (доступ на всех устройствах).</label><br>
+                    <button onclick="nextQuestion('game', 2)">Далее</button>
+                </div>
+                <div class="question" id="game-question-3" style="display:none;">
+                    <p>3. Нужна ли сложная физика и анимации в игре?</p>
+                    <label class="option-button"><input type="radio" name="physics" value="C++"> Да, необходима реалистичная физика и сложные анимации.</label><br>
+                    <label class="option-button"><input type="radio" name="physics" value="C#, Java"> Нет, достаточно минимальной физики и простых анимаций.</label><br>
+                    <button onclick="nextQuestion('game', 3)">Далее</button>
+                </div>
+                <div class="question" id="game-question-4" style="display:none;">
+                    <p>4. Должна ли игра быть многопользовательской?</p>
+                    <label class="option-button"><input type="radio" name="open-world" value="Python, C#"> Да, игра с сетевым режимом.</label><br>
+                    <label class="option-button"><input type="radio" name="open-world" value="Python, C++"> Нет, игра для одного пользователя.</label><br>
+                    <button onclick="nextQuestion('game', 4)">Далее</button>
+                </div>
+                <div class="question" id="game-question-5" style="display:none;">
+                    <p>5. Планируете ли вы реализовать искусственный интеллект для NPC?</p>
+                    <label class="option-button"><input type="radio" name="ai" value="Python, C++"> Да, сложный ИИ с разнообразными действиями.</label><br>
+                    <label class="option-button"><input type="radio" name="ai" value="C#"> Нет, ИИ не требуется.</label><br>
+                    <button onclick="nextQuestion('game', 5)">Далее</button>
+                </div>
+                <div class="question" id="game-question-6" style="display:none;">
+                    <p>6. Какой уровень производительности вы ожидаете?</p>
+                    <label class="option-button"><input type="radio" name="performance-game" value="C++"> Высокий, игра должна быть максимально оптимизированной.</label><br>
+                    <label class="option-button"><input type="radio" name="performance-game" value="Java"> Средний, допускается умеренная нагрузка.</label><br>
+                    <label class="option-button"><input type="radio" name="performance-game" value="C#"> Низкий, игра будет проста в реализации.</label><br>
+                    <button onclick="nextQuestion('game', 6)">Далее</button>
+                </div>
+                <div class="question" id="game-question-7" style="display:none;">
+                    <p>7. Какой тип управления нужен в игре?</p>
+                    <label class="option-button"><input type="radio" name="modifications" value="C++, C#"> Управление мышью и клавиатурой.</label><br>
+                    <label class="option-button"><input type="radio" name="modifications" value="Python"> Управление через сенсорный экран..</label><br>
+                    <button onclick="nextQuestion('game', 7)">Далее</button>
+                </div>
+                <div class="question" id="game-question-8" style="display:none;">
+                    <p>8. Какой тип графики вы планируете использовать?</p>
+                    <label class="option-button"><input type="radio" name="graphics-type" value="Python, Java"> 2D графика.</label><br>
+                    <label class="option-button"><input type="radio" name="graphics-type" value="C#, C++"> 3D графика.</label><br>
+                    <label class="option-button"><input type="radio" name="graphics-type" value="Java, Python"> Пиксельная графика.</label><br>
+                    <button onclick="nextQuestion('game', 8)">Далее</button>
+                </div>
+                <div class="question" id="game-question-9" style="display:none;">
+                    <p>9. Как вы планируете распространять свою игру?</p>
+                    <label class="option-button"><input type="radio" name="distribution-game" value="store"> Через магазины приложений (Steam, Epic Games Store).</label><br>
+                    <label class="option-button"><input type="radio" name="distribution-game" value="free"> Бесплатно, с возможностью донатов.</label><br>
+                    <label class="option-button"><input type="radio" name="distribution-game" value="local"> Локально, без публикации.</label><br>
+                    <button onclick="nextQuestion('game', 9)">Далее</button>
+                </div>
+                <div class="question" id="game-question-10" style="display:none;">
+                    <p>10. Какой объем игры планируется?</p>
+                    <label class="option-button"><input type="radio" name="story" value="Python, C#"> Небольшая игра, несколько уровней, быстрое прохождение.</label><br>
+                    <label class="option-button"><input type="radio" name="story" value="C++, C#"> Большая игра с открытым миром.</label><br>
+                    <button onclick="nextQuestion('game', 10)">Далее</button>
+                </div>
+            </div>
+
+            <!-- Машинное обучение и ИИ -->
+            <div id="ml-questions" class="questions" style="display:none;">
+                <h2>Машинное обучение и искусственный интеллект</h2>
+                <div class="question" id="ml-question-1" style="display:block;">
+                    <p>1. Какую задачу вы хотите решить с помощью машинного обучения?</p>
+                    <label class="option-button"><input type="checkbox" value="Python, C++"> Анализ данных.</label><br>
+                    <label class="option-button"><input type="checkbox" value="Python"> Обработка изображений (распознавание лиц, объектов).</label><br>
+                    <label class="option-button"><input type="checkbox" value="Python, C++"> Обработка текста (анализ тональности, чат-боты).</label><br>
+                    <label class="option-button"><input type="checkbox" value="Python"> Рекомендательные системы.</label><br>
+                    <button onclick="nextQuestion('ml', 1)">Далее</button>
+                </div>
+                <div class="question" id="ml-question-2" style="display:none;">
+                    <p>2. Какой объем данных вы планируете обрабатывать?</p>
+                    <label class="option-button"><input type="radio" name="data-volume" value="Python"> Маленький (до 1 ГБ).</label><br>
+                    <label class="option-button"><input type="radio" name="data-volume" value="Python"> Средний (до 10 ГБ).</label><br>
+                    <label class="option-button"><input type="radio" name="data-volume" value="Python"> Большой (от 10 ГБ и больше).</label><br>
+                    <button onclick="nextQuestion('ml', 2)">Далее</button>
+                </div>
+                <div class="question" id="ml-question-3" style="display:none;">
+                    <p>3. Нужна ли вам высокая производительность при обработке данных?</p>
+                    <label class="option-button"><input type="radio" name="performance" value="С++"> Да, необходима максимальная оптимизация.</label><br>
+                    <label class="option-button"><input type="radio" name="performance" value="Python"> Нет, производительность не критична.</label><br>
+                    <button onclick="nextQuestion('ml', 3)">Далее</button>
+                </div>
+                <div class="question" id="ml-question-4" style="display:none;">
+                    <p>4. Будете ли вы использовать нейронные сети?</p>
+                    <label class="option-button"><input type="radio" name="neural-networks" value="Python"> Да, глубокое обучение обязательно.</label><br>
+                    <label class="option-button"><input type="radio" name="neural-networks" value="Python"> Да, базовые нейронные сети для простых задач.</label><br>
+                    <label class="option-button"><input type="radio" name="neural-networks" value=""> Нет, нейронные сети не нужны.</label><br>
+                    <button onclick="nextQuestion('ml', 4)">Далее</button>
+                </div>
+                <div class="question" id="ml-question-5" style="display:none;">
+                    <p>5. Нужна ли вам интеграция вашей модели с другими приложениями или системами?</p>
+                    <label class="option-button"><input type="radio" name="integration" value="Python"> Да, модель будет встроена в веб-приложение или мобильное приложение.</label><br>
+                    <label class="option-button"><input type="radio" name="integration" value="none"> Нет, модель будет автономной.</label><br>
+                    <button onclick="nextQuestion('ml', 5)">Далее</button>
+                </div>
+                <div class="question" id="ml-question-6" style="display:none;">
+                    <p>6. Какие библиотеки и инструменты вы планируете использовать?</p>
+                    <label class="option-button"><input type="radio" name="libraries-ml" value="Python"> Популярные библиотеки для глубокого обучения (TensorFlow, PyTorch).</label><br>
+                    <label class="option-button"><input type="radio" name="libraries-ml" value="Python"> Стандартные библиотеки для анализа данных (Scikit-learn, NumPy).</label><br>
+                    <label class="option-button"><input type="radio" name="libraries-ml" value="none"> Другие инструменты или без библиотек.</label><br>
+                    <button onclick="nextQuestion('ml', 6)">Далее</button>
+                </div>
+                <div class="question" id="ml-question-7" style="display:none;">
+                    <p>7. Какой объем данных предполагается использовать в вашей модели?</p>
+                    <label class="option-button"><input type="radio" name="platform" value="Python"> Средний (от1 до 10 ГБ)</label><br>
+                    <label class="option-button"><input type="radio" name="platform" value="Python"> Большой (свыше 10 ГБ).</label><br>
+                    <label class="option-button"><input type="radio" name="platform" value="C++"> Динамический (обновление данных в реальном времени).</label><br>
+                    <button onclick="nextQuestion('ml', 7)">Далее</button>
+                </div>
+                <div class="question" id="ml-question-8" style="display:none;">
+                    <p>8. Какова основная цель использования ИИ?</p>
+                    <label class="option-button"><input type="radio" name="goal" value="Python"> Автоматизация задач и процессов.</label><br>
+                    <label class="option-button"><input type="radio" name="goal" value="Python"> Проведение научных исследований.</label><br>
+                    <label class="option-button"><input type="radio" name="goal" value="Python"> Создание пользовательских решений (чат-боты, помощники).</label><br>
+                    <button onclick="nextQuestion('ml', 8)">Далее</button>
+                </div>
+                <div class="question" id="ml-question-9" style="display:none;">
+                    <p>9. Планируете ли вы разрабатывать собственные алгоритмы машинного обучения?</p>
+                    <label class="option-button"><input type="radio" name="custom-algorithms" value="C++"> Да, потребуется глубокое понимание алгоритмов и реализация своих решений.</label><br>
+                    <label class="option-button"><input type="radio" name="custom-algorithms" value="Python"> Нет, достаточно использования готовых библиотек.</label><br>
+                    <button onclick="nextQuestion('ml', 9)">Далее</button>
+                </div>
+                <div class="question" id="ml-question-10" style="display:none;">
+                    <p>10. Какой уровень оптимизации важен для вашей модели?</p>
+                    <label class="option-button"><input type="radio" name="optimization" value="C++"> Максимальная скорость и минимальное потребление ресурсов.</label><br>
+                    <label class="option-button"><input type="radio" name="optimization" value="Python"> Средний уровень оптимизации, достаточный для задачи.</label><br>
+                    <label class="option-button"><input type="radio" name="optimization" value="Python"> Низкий, можно допустить небольшие задержки.</label><br>
+                    <button onclick="nextQuestion('ml', 10)">Далее</button>
+                </div>
+            </div>
+
+            <!-- Разработка децентрализованных приложений и блокчейн -->
+            <div id="blockchain-questions" class="questions" style="display:none;">
+                <h2>Разработка децентрализованных приложений и блокчейн</h2>
+                <div class="question" id="blockchain-question-1" style="display:block;">
+                    <p>1. Какой тип приложения вы хотите создать?</p>
+                    <label class="option-button"><input type="checkbox" value="JavaScript"> Финансовое приложение (кошелек, платежная система).</label><br>
+                    <label class="option-button"><input type="checkbox" value="Python"> Приложение для отслеживания транзакций.</label><br>
+                    <label class="option-button"><input type="checkbox" value="JavaScript"> Платформа для смарт-контрактов.</label><br>
+                    <label class="option-button"><input type="checkbox" value="Java"> Игровое или социальное приложение на блокчейне.</label><br>
+                    <button onclick="nextQuestion('blockchain', 1)">Далее</button>
+                </div>
+                <div class="question" id="blockchain-question-2" style="display:none;">
+                    <p>2. Какие типы транзакций должны поддерживаться?</p>
+                    <label class="option-button"><input type="radio" name="platform-blockchain" value="Python"> Финансовые транзакции.</label><br>
+                    <label class="option-button"><input type="radio" name="platform-blockchain" value="Java"> Передача данных.</label><br>
+                    <button onclick="nextQuestion('blockchain', 2)">Далее</button>
+                </div>
+                <div class="question" id="blockchain-question-3" style="display:none;">
+                    <p>3. Нужна ли интеграция вашего приложения с веб или мобильными интерфейсами?</p>
+                    <label class="option-button"><input type="radio" name="integration-ui" value=""> Да, потребуется веб-интерфейс.</label><br>
+                    <label class="option-button"><input type="radio" name="integration-ui" value=""> Нет, интерфейс не нужен, только функционал.</label><br>
+                    <button onclick="nextQuestion('blockchain', 3)">Далее</button>
+                </div>
+                <div class="question" id="blockchain-question-4" style="display:none;">
+                    <p>4. Планируете ли вы использовать смарт-контракты?</p>
+                    <label class="option-button"><input type="radio" name="smart-contracts" value="JavaScript"> Да, сложные смарт-контракты для обработки данных.</label><br>
+                    <label class="option-button"><input type="radio" name="smart-contracts" value="JavaScript"> Нет, смарт-контракты не нужны.</label><br>
+                    <button onclick="nextQuestion('blockchain', 4)">Далее</button>
+                </div>
+                <div class="question" id="blockchain-question-5" style="display:none;">
+                    <p>5. Какой уровень безопасности вы ожидаете от приложения?</p>
+                    <label class="option-button"><input type="radio" name="security" value="Python"> Высокий, с использованием сложных алгоритмов шифрования.</label><br>
+                    <label class="option-button"><input type="radio" name="security" value="JavaScript"> Средний, с базовыми мерами защиты.</label><br>
+                    <label class="option-button"><input type="radio" name="security" value="Java"> Низкий, безопасность не является приоритетом.</label><br>
+                    <button onclick="nextQuestion('blockchain', 5)">Далее</button>
+                </div>
+                <div class="question" id="blockchain-question-6" style="display:none;">
+                    <p>6. Будет ли ваш проект использовать децентрализованное хранилище данных?</p>
+                    <label class="option-button"><input type="radio" name="storage" value=""> Да, полностью децентрализованное хранилище (например, IPFS).</label><br>
+                    <label class="option-button"><input type="radio" name="storage" value=""> Нет, данные будут храниться централизованно.</label><br>
+                    <button onclick="nextQuestion('blockchain', 6)">Далее</button>
+                </div>
+                <div class="question" id="blockchain-question-7" style="display:none;">
+                    <p>7. Какую производительность вы ожидаете от блокчейна?</p>
+                    <label class="option-button"><input type="radio" name="performance-blockchain" value="Python"> Высокую, приложение должно обрабатывать множество транзакций быстро.</label><br>
+                    <label class="option-button"><input type="radio" name="performance-blockchain" value="JavaScript"> Среднюю, допускается небольшая задержка.</label><br>
+                    <label class="option-button"><input type="radio" name="performance-blockchain" value="Java"> Низкую, скорость не критична.</label><br>
+                    <button onclick="nextQuestion('blockchain', 7)">Далее</button>
+                </div>
+                <div class="question" id="blockchain-question-8" style="display:none;">
+                    <p>8. Какую функциональность вы хотите добавить в приложение?</p>
+                    <label class="option-button"><input type="checkbox" value="JavaScript"> Верификация транзакций.</label><br>
+                    <label class="option-button"><input type="checkbox" value="Python"> Поддержка криптовалют.</label><br>
+                    <label class="option-button"><input type="checkbox" value="Java"> Создание и продажа NFT.</label><br>
+                    <label class="option-button"><input type="checkbox" value="Java"> Программируемая логика смарт-контрактов.</label><br>
+                    <button onclick="nextQuestion('blockchain', 8)">Далее</button>
+                </div>
+                <div class="question" id="blockchain-question-9" style="display:none;">
+                    <p>9. Планируете ли вы интеграцию приложения с существующими централизованными системами?</p>
+                    <label class="option-button"><input type="radio" name="integration-systems" value=""> Да, потребуется интеграция с централизованными API.</label><br>
+                    <label class="option-button"><input type="radio" name="integration-systems" value=""> Нет, приложение будет полностью автономным.</label><br>
+                    <button onclick="nextQuestion('blockchain', 9)">Далее</button>
+                </div>
+                <div class="question" id="blockchain-question-10" style="display:none;">
+                    <p>10. Какой уровень масштабируемости нужен вашему приложению?</p>
+                    <label class="option-button"><input type="radio" name="scalability" value="Python"> Высокая, проект рассчитан на большое количество пользователей.</label><br>
+                    <label class="option-button"><input type="radio" name="scalability" value="Java"> Средняя, проект рассчитан на ограниченный круг пользователей.</label><br>
+                    <label class="option-button"><input type="radio" name="scalability" value="Java"> Низкая, проект будет использоваться небольшим количеством пользователей.</label><br>
+                    <button onclick="nextQuestion('blockchain', 10)">Далее</button>
+                </div>
+            </div>
+
+            <div id="result" style="display:none;">
+                <h2>Подходящие языки программирования:</h2>
+                <p id="programming-languages"></p>
+                <button onclick="finishSurvey()">Завершить</button>
+            </div>
+        </div>
+        <button onclick="cancelSurvey()">Отмена</button>
+    </div>
+
+    <script src="choose_lang_program.js"></script>
+</body>
+</html>

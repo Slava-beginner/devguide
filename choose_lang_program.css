@@ -1,0 +1,76 @@
+body {
+    font-family: Calibri, sans-serif;
+    background-color: #fff;
+    color: #000;
+    margin: 0; /* Убираем отступы */
+    padding: 0;
+}
+
+.container {
+    max-width: 600px; /* Ширина контейнера */
+    max-height: 800px; /* Ограничиваем высоту контейнера */
+    margin: 100px auto; /* Отступ сверху и центрирование по горизонтали */
+    padding: 20px;
+    border: 2px solid #000;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Прячем лишнее содержимое */
+}
+
+h1, h2 {
+    margin-bottom: 20px;
+}
+
+p{
+font-size: 25px; /* Увеличенный размер шрифта */
+    line-height: 1.5; /* Высота строки для лучшей читаемости */
+    margin: 10px 0; /* Отступы сверху и снизу для параграфов */
+	}
+
+.question {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column; /* Варианты ответов по вертикали */
+    align-items: center; /* Центрирование вариантов ответов */
+}
+
+.option-button {
+    display: inline-block;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 12px 15px; /* Увеличенные отступы для кнопок */
+    margin: 5px 0; /* Отступ между кнопками */
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: left;
+    width: 90%; /* Ширина кнопок немного меньше */
+    font-size: 16px; /* Увеличенный размер шрифта */
+}
+
+.option-button:hover {
+    background-color: #444;
+}
+
+button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px; /* Отступ между вопросами и кнопками */
+    font-size: 16px; /* Увеличенный размер шрифта для кнопок */
+}
+
+button:hover {
+    background-color: #444;
+}
+
+.questions {
+    display: none;
+}

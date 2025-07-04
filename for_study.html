@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevGuide</title>
+      <link rel="icon" href="https://cdn.glitch.global/7c5bfd96-c6cb-4437-8495-9c6685ab23cb/favicon-32x32.png?v=1745089339521" type="image/x-icon">
+    <link rel="stylesheet" href="for_study.css">
+</head>
+<body>
+
+<header class="top-menu">
+    <h1 class="text-center">DevGuide</h1>
+    <button class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+    
+    <nav class="sidebar" id="sidebar">
+        <div class="menu-item" onclick="toggleMenu('basic')">Раздел 1: Основы программирования</div>
+        <div class="submenu" id="basic">
+            <a href="begin.html">Теоретические основы</a>
+            <a href="types of languages.html">Классификация языков программирования</a>
+            <a href="https://cdn.glitch.global/7c5bfd96-c6cb-4437-8495-9c6685ab23cb/%D0%A2%D0%B5%D1%80%D0%BC%D0%B8%D0%BD%D1%8B%20%D0%BF%D0%BE%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8E.docx?v=1741513676779" download>Основные определения</a>
+            <a href="begin_task.html">Задание</a>
+        </div>
+        <div class="menu-item" onclick="toggleMenu('dev')">Раздел 2: Направления разработки</div>
+        <div class="submenu" id="dev">
+            <a href="web-dev.html">Веб-разработка</a>
+            <a href="mobile-dev.html">Мобильная разработка</a>
+            <a href="desktop-dev.html">Настольная разработка</a>
+            <a href="game-dev.html">Разработка игр</a>
+            <a href="ai-dev.html">Машинное обучение и ИИ</a>
+            <a href="begin_task_1.html">Задания</a>
+        </div>
+        <div class="menu-item" onclick="toggleMenu('languages')">Раздел 3: Языки программирования</div>
+        <div class="submenu" id="languages">
+            <a href="lang_program.html">Языки программирования</a>
+            <a href="test.html">Тест по языкам</a>
+            <a href="begin_task_2.html">Задания</a>
+        </div>
+        <div class="menu-item" onclick="toggleMenu('choose')">Раздел 4: Выбор языков программирования</div>
+        <div class="submenu" id="choose">
+			  <a href="how choose.html">Как выбрать соответсвующий язык</a>
+        <a href="opros lang.html">Опрос по выбору языков</a>
+        </div>
+        <div class="menu-item" onclick="toggleMenu('resources')">Раздел 5: Образовательные ресурсы</div>
+        <div class="submenu" id="resources">
+            <a href="for_study.html">Полезные материалы</a>
+        </div>
+    </nav>
+</header>
+  
+<main>
+        <section class="intro">
+            <p>
+            Добро пожаловать на страницу образовательных ресурсов! Здесь вы найдете полезные материалы для изучения различных языков программирования.
+            </p>
+        </section>
+        <div class="card-container">
+            <!-- HTML -->
+            <div class="card">
+                <div class="card-front">
+                    <h2>HTML</h2>
+                </div>
+                <div class="card-back">
+                    <a href="https://www.freecodecamp.org/learn/2022/responsive-web-design/" target="_blank">Задачи по html</a>
+                    <a href="https://code-basics.com/ru/languages/html" target="_blank">Курс по HTMl</a>
+                </div>
+            </div>
+            <!-- CSS -->
+            <div class="card">
+                <div class="card-front">
+                    <h2>CSS</h2>
+                </div>
+                <div class="card-back">
+                    <a href="https://www.freecodecamp.org/learn/2022/responsive-web-design/" target="_blank">Задачки по CSS</a>
+                    <a href="https://www.sololearn.com/ru/learn/courses/css-introduction" target="_blank">Курс по CSS</a>
+                </div>
+            </div>
+            <!-- JavaScript -->
+            <div class="card">
+                <div class="card-front">
+                    <h2>JavaScript</h2>
+                </div>
+                <div class="card-back">
+                    <a href="https://ru.hexlet.io/courses/js-basics" target="_blank">Курс по JavaScript</a>
+                    <a href="https://stepik.org/course/180784/promo?search=4361021530" target="_blank">JavaScript для начинающих</a>
+                </div>
+            </div>
+            <!-- SQL -->
+            <div class="card">
+                <div class="card-front">
+                    <h2>SQL</h2>
+                </div>
+                <div class="card-back">
+                    <a href="https://ru.hexlet.io/courses/sql-basics" target="_blank">Основы SQL</a>
+                    <a href="https://itempuniversity.com/course/view.php?id=533#section-0" target="_blank">Курс по SQL</a>
+                </div>
+            </div>
+            <!-- PHP -->
+            <div class="card">
+                <div class="card-front">
+                    <h2>PHP</h2>
+                </div>
+                <div class="card-back">
+                    <a href="https://ru.hexlet.io/courses/php-basics" target="_blank">Курс по PHP</a>
+                    <a href="https://stepik.org/course/62383/promo?search=4361034517" target="_blank">PHP для начинающих</a>
+  
+                </div>
+            </div>
+            <!-- Python -->
+            <div class="card">
+                <div class="card-front">
+                    <h2>Python</h2>
+                </div>
+                <div class="card-back">
+                    <a href="https://pythontutor.ru/lessons/inout_and_arithmetic_operations/" target="_blank">Python на практике</a>
+                    <a href="https://ru.hexlet.io/courses/python-basics" target="_blank">Курс по Python</a>
+                </div>
+            </div>
+            <!-- C++ -->
+            <div class="card">
+                <div class="card-front">
+                    <h2>C++</h2>
+                </div>
+                <div class="card-back">
+                    <a href="https://stepik.org/course/193691/promo?search=4361048833" target="_blank">С++ c элементами языка С</a>
+                    <a href="https://www.tutorialspoint.com/cplusplus/index.htm" target="_blank">Курс по C++</a>
+                </div>
+            </div>
+            <!-- C# -->
+            <div class="card">
+                <div class="card-front">
+                    <h2>C#</h2>
+                </div>
+                <div class="card-back">
+                    <a href="https://www.w3resource.com/csharp-exercises/basic/index.php" target="_blank">Задачи по C#</a>
+                    <a href="https://www.sololearn.com/ru/learn/courses/c-sharp-introduction" target="_blank">Курс по C#</a>
+                </div>
+            </div>
+            <!-- Java -->
+            <div class="card">
+                <div class="card-front">
+                    <h2>Java</h2>
+                </div>
+                <div class="card-back">
+                    <a href="https://ru.hexlet.io/courses/java-basics" target="_blank">Курс по Java</a>
+                    <a href="https://www.tutorialspoint.com/java/index.htm" target="_blank">Туториал по Java </a>
+                </div>
+            </div>
+            <!-- Kotlin -->
+            <div class="card">
+                <div class="card-front">
+                    <h2>Kotlin</h2>
+                </div>
+                <div class="card-back">
+                    <a href="https://www.w3resource.com/kotlin-exercises/index.php" target="_blank">Задачи по Kotlin</a>
+                    <a href="https://stepik.org/course/131507/promo?search=6126720189" target="_blank">Курс по Kotlin с задачами</a>
+                </div>
+            </div>
+           <div class="card">
+                <div class="card-front">
+                    <h2>Swift</h2>
+                </div>
+                <div class="card-back">
+                    <a href="https://stepik.org/course/89377/promo?search=6188006720" target="_blank">Курс по Swift</a>
+                    <a href="https://swiftpractice.fun/swift/" target="_blank">Задачи по Swift </a>
+                </div>
+            </div>
+        </div>
+    </main>
+<script src="dev.js"></script>
+</body>
+</html>

@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Теоретические основы</title>
+  <link rel="stylesheet" href="begin.css">
+</head>
+<body>
+
+  <div class="container">
+    <header class="top-menu">
+    <button class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+    
+    <nav class="sidebar" id="sidebar">
+        <div class="menu-item" onclick="toggleMenu('basic')">Раздел 1: Основы программирования</div>
+        <div class="submenu" id="basic">
+            <a href="begin.html">Теоретические основы</a>
+            <a href="types of languages.html">Классификация языков программирования</a>
+            <a href="https://cdn.glitch.global/7c5bfd96-c6cb-4437-8495-9c6685ab23cb/%D0%A2%D0%B5%D1%80%D0%BC%D0%B8%D0%BD%D1%8B%20%D0%BF%D0%BE%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8E.docx?v=1741513676779" download>Основные определения</a>
+            <a href="begin_task.html">Задание</a>
+        </div>
+        <div class="menu-item" onclick="toggleMenu('dev')">Раздел 2: Направления разработки</div>
+        <div class="submenu" id="dev">
+            <a href="web-dev.html">Веб-разработка</a>
+            <a href="mobile-dev.html">Мобильная разработка</a>
+            <a href="desktop-dev.html">Настольная разработка</a>
+            <a href="game-dev.html">Разработка игр</a>
+            <a href="ai-dev.html">Машинное обучение и ИИ</a>
+            <a href="begin_task_1.html">Задания</a>
+        </div>
+        <div class="menu-item" onclick="toggleMenu('languages')">Раздел 3: Языки программирования</div>
+        <div class="submenu" id="languages">
+            <a href="lang_program.html">Языки программирования</a>
+            <a href="test.html">Тест по языкам</a>
+            <a href="begin_task_2.html">Задания</a>
+        </div>
+        <div class="menu-item" onclick="toggleMenu('choose')">Раздел 4: Выбор языков программирования</div>
+        <div class="submenu" id="choose">
+			<a href="how choose.html">Как выбрать соответсвующий язык</a>
+            <a href="opros lang.html">Опрос по выбору языков</a>
+        </div>
+        <div class="menu-item" onclick="toggleMenu('resources')">Раздел 5: Образовательные ресурсы</div>
+        <div class="submenu" id="resources">
+            <a href="for_study.html">Полезные материалы</a>
+        </div>
+    </nav>
+</header>
+    <h1>Выполните любую кейс-задачу</h1>
+
+<h1><strong>Кейс 1: Социальная сеть</strong></h1>
+
+<p><strong>Задача</strong>:<br />
+Нужно создать платформу, где пользователи смогут публиковать работы, комментировать посты и общаться в чатах.<br />
+<br />
+<strong>Вопросы для анализа</strong>:</p>
+
+<ul>
+	<li>
+	<p>Какой язык будет отвечать за хранение данных о пользователях и постах?</p>
+	</li>
+	<li>
+	<p>Что будет обрабатывать действия в реальном времени (лайки, чаты)?</p>
+	</li>
+	<li>
+	<p>Какой язык обеспечит отображение интерфейса?</p>
+	</li>
+</ul>
+
+<h3>&nbsp;</h3>
+
+<h1><strong>Кейс 2: Мобильное приложение для фитнеса</strong></h1>
+
+<p><strong>Задача</strong>:<br />
+Приложение должно работать на iOS и Android, синхронизировать данные с умными часами и иметь красивый UI.<br />
+<br />
+<strong>Вопросы для анализа</strong>:</p>
+
+<ul>
+	<li>
+	<p>Какой язык выбрать, чтобы охватить обе платформы?</p>
+	</li>
+	<li>
+	<p>Что лучше для &laquo;родного&raquo; iOS-приложения с высокой производительностью?</p>
+	</li>
+	<li>
+	<p>Какой язык интегрируется с кроссплатформенными фреймворками?</p>
+	</li>
+</ul>
+
+<h3>&nbsp;</h3>
+
+<h1><strong>Кейс 3: Игра для ПК с 3D-графикой</strong></h1>
+
+<p><strong>Задача</strong>:<br />
+Разработать RPG-игру с реалистичной графикой и физикой.<br />
+<br />
+<strong>Вопросы для анализа</strong>:</p>
+
+<ul>
+	<li>
+	<p>Какой язык подойдет для работы с мощным игровым движком?</p>
+	</li>
+	<li>
+	<p>Что выбрать для быстрого прототипирования механик?</p>
+	</li>
+	<li>
+	<p>Какой язык требует больше ресурсов, но дает высокую производительность?</p>
+	</li>
+</ul>
+
+<h3>&nbsp;</h3>
+
+<h1><strong>Кейс 4: Автоматизация отчетов в компании</strong></h1>
+
+<p><strong>Задача</strong>:<br />
+Нужно парсить Excel-файлы, генерировать сводки и отправлять их по почте.<br />
+<br />
+<strong>Вопросы для анализа</strong>:</p>
+
+<ul>
+	<li>
+	<p>Какой язык имеет богатые библиотеки для работы с данными?</p>
+	</li>
+	<li>
+	<p>Что проще освоить новичку для решения такой задачи?</p>
+	</li>
+	<li>
+	<p>Какой язык избыточен для простых скриптов?</p>
+	</li>
+</ul>
+
+<h3>&nbsp;</h3>
+
+<h1><strong>Кейс 5: Приложение для умного дома</strong></h1>
+
+<p><strong>Задача</strong>:<br />
+Система управляет светом, розетками и датчиками через микроконтроллер (Raspberry Pi).<br />
+<br />
+<strong>Вопросы для анализа</strong>:</p>
+
+<ul>
+	<li>
+	<p>Какой язык эффективен для работы с &laquo;железом&raquo;?</p>
+	</li>
+	<li>
+	<p>Что выбрать для простой настройки логики без глубоких знаний?</p>
+	</li>
+	<li>
+	<p>Какой язык может быть слишком &laquo;тяжелым&raquo; для микроконтроллера?</p>
+	</li>
+</ul>
+
+<h3>&nbsp;</h3>
+
+<h1><strong>Кейс 6: Интернет-магазин с персональными рекомендациями</strong></h1>
+
+<p><strong>Задача</strong>:<br />
+Платформа должна показывать товары на основе истории покупок, используя простые ML-алгоритмы.<br />
+<br />
+<strong>Вопросы для анализа</strong>:</p>
+
+<ul>
+	<li>
+	<p>Какой язык позволит внедрить ML-модель в бэкенд?</p>
+	</li>
+	<li>
+	<p>Что лучше для обработки запросов пользователя в реальном времени?</p>
+	</li>
+	<li>
+	<p>Какой язык будет излишне сложным для базовой аналитики?</p>
+	</li>
+</ul>
+
+<h3>&nbsp;</h3>
+
+<h1><strong>Кейс 7: Офлайн-приложение для учета финансов</strong></h1>
+
+<p><strong>Задача</strong>:<br />
+Программа для ПК с графиками и экспортом данных в PDF. Должна работать без интернета.<br />
+<br />
+<strong>Вопросы для анализа</strong>:</p>
+
+<ul>
+	<li>
+	<p>Какой язык предлагает удобные GUI-библиотеки?</p>
+	</li>
+	<li>
+	<p>Что лучше для кроссплатформенности (Windows, macOS)?</p>
+	</li>
+	<li>
+	<p>Какой язык может замедлить работу приложения?</p>
+	</li>
+</ul>
+
+<h3>&nbsp;</h3>
+
+<h1><strong>Кейс 8: Визуализация данных продаж</strong></h1>
+
+<p><strong>Задача</strong>:<br />
+Создать систему для анализа и отображения статистики продаж в виде графиков (столбчатых, круговых). Нужны интерактивные элементы.<br />
+<br />
+<strong>Вопросы для анализа</strong>:</p>
+
+<ul>
+	<li>
+	<p>Какой язык предоставляет лучшие библиотеки для математических расчетов?</p>
+	</li>
+	<li>
+	<p>Что выбрать для создания интерактивных графиков на веб-странице?</p>
+	</li>
+	<li>
+	<p>Какой язык избыточен для простой визуализации без сложной аналитики?</p>
+	</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<h1><strong>Кейс 9: Чат-бот для Telegram</strong></h1>
+
+<p><strong>Задача</strong>:<br />
+Разработать бота, который отвечает на вопросы пользователей, сохраняет их запросы в базу данных и отправляет уведомления.<br />
+<br />
+<strong>Вопросы для анализа</strong>:</p>
+
+<ul>
+	<li>
+	<p>У какого языка есть готовые библиотеки для быстрого подключения к Telegram API?</p>
+	</li>
+	<li>
+	<p>Какой язык проще освоить для работы с асинхронными запросами?</p>
+	</li>
+	<li>
+	<p>Что выбрать, если нужно интегрировать бота с веб-сайтом на WordPress?</p>
+	</li>
+</ul>
+
+<h3>&nbsp;</h3>
+
+<h1><strong>Кейс 10: Визуализация данных продаж</strong></h1>
+
+<p><strong>Задача</strong>:<br />
+Создать систему для анализа и отображения статистики продаж в виде графиков (столбчатых, круговых). Нужны интерактивные элементы.<br />
+<br />
+<strong>Вопросы для анализа</strong>:</p>
+
+<ul>
+	<li>
+	<p>Какой язык предоставляет лучшие библиотеки для математических расчетов?</p>
+	</li>
+	<li>
+	<p>Что выбрать для создания интерактивных графиков на веб-странице?</p>
+	</li>
+	<li>
+	<p>Какой язык избыточен для простой визуализации без сложной аналитики?</p>
+	</li>
+</ul>
+
+
+<button onclick="showSection(3)" class="download-button">Выполнить задание</button>
+<form class="section" id="section3">
+    <h2>Ответ на раздел 3</h2>
+    <input type="text" placeholder="ФИО" required class="fio">
+    <input type="text" placeholder="Группа" required class="group">
+    <textarea placeholder="Ответ" required class="text"></textarea>
+    <div class="file-input">
+  <label class="download-button">
+    Выбрать файл
+    <input type="file" class="file" hidden>
+  </label>
+   <div class="file-info" style="display: none;"></div>
+</div>
+  
+    <button type="button" onclick="submitForm(3)" class="download-button">Отправить</button>
+  </form>
+<script>
+  
+    document.getElementById("hamburger").addEventListener("click", function() {
+        document.getElementById("sidebar").classList.toggle("active");
+    });
+
+    function toggleMenu(id) {
+        let submenu = document.getElementById(id);
+        let allSubmenus = document.querySelectorAll(".submenu");
+
+        allSubmenus.forEach(menu => {
+            if (menu !== submenu) {
+                menu.style.display = "none";
+            }
+        });
+
+        submenu.style.display = submenu.style.display === "block" ? "none" : "block";
+    }
+
+    let cards = document.querySelectorAll(".form-card");
+    let currentIndex = 0;
+
+    function showNextCard() {
+        cards[currentIndex].classList.remove("active");
+        currentIndex = (currentIndex + 1) % cards.length;
+        cards[currentIndex].classList.add("active");
+    }
+
+    setInterval(showNextCard, 6000);
+  
+const scriptUrl = "https://script.google.com/macros/s/AKfycby5ohrYWfONyuBIV2Ll_SEE4RmFGdEuWZP2e5sn8gbrlQUS8zYdtDSli971eTZMmS3bJg/exec";
+    
+    // Показ нужного раздела
+    function showSection(sectionNum) {
+      document.querySelectorAll('.section').forEach(el => {
+        el.classList.remove('active');
+        el.querySelectorAll('input').forEach(input => input.classList.remove('error'));
+      });
+      document.getElementById(`section${sectionNum}`).classList.add('active');
+    }
+
+    // Валидация полей
+    function validateForm(form) {
+      let isValid = true;
+      form.querySelectorAll('[required]').forEach(input => {
+        if (!input.value.trim()) {
+          input.classList.add('error');
+          isValid = false;
+        } else {
+          input.classList.remove('error');
+        }
+      });
+      return isValid;
+    }
+
+    // Отправка данных
+    async function submitForm(sectionNum) {
+      const form = document.getElementById(`section${sectionNum}`);
+      
+      if (!validateForm(form)) {
+        alert("Заполните все обязательные поля (помечены *)!");
+        return;
+      }
+
+      const fio = form.querySelector('.fio').value.trim();
+      const group = form.querySelector('.group').value.trim();
+      const text = form.querySelector('.text').value.trim();
+      const file = form.querySelector('.file').files[0];
+
+      const formData = new FormData();
+      formData.append("fio", fio);
+      formData.append("group", group);
+      formData.append("section", sectionNum.toString()); // Важно: передаём как строку!
+      formData.append("text", text);
+
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = (e) => {
+          formData.append("fileData", e.target.result.split(',')[1]); // Только base64
+          formData.append("fileName", file.name);
+          formData.append("mimeType", file.type);
+          sendToGoogleScript(formData);
+        };
+        reader.readAsDataURL(file);
+      } else {
+        sendToGoogleScript(formData);
+      }
+    }
+
+    // Отправка на Google Apps Script
+    async function sendToGoogleScript(formData) {
+      try {
+        const response = await fetch(scriptUrl, {
+          method: "POST",
+          body: new URLSearchParams(formData),
+          redirect: "follow"
+        });
+        
+        const result = await response.text();
+        alert(result.includes("Ошибка") ? result : "✅ Ответ успешно отправлен!");
+      } catch (err) {
+        alert("⛔ Ошибка сети: " + err.message);
+      }
+    }
+document.querySelectorAll('.file-input input[type="file"]').forEach(input => {
+  input.addEventListener('change', function(e) {
+    const infoBlock = this.parentElement.nextElementSibling;
+    
+    if(this.files.length > 0) {
+      const file = this.files[0];
+      const parts = file.name.split('.');
+      const name = parts.slice(0, -1).join('.');
+      const ext = parts.length > 1 ? `.${parts.pop()}` : '';
+      
+      infoBlock.innerHTML = `Выбран файл: <b>${name}</b><i>${ext}</i>`;
+      infoBlock.style.display = 'block';
+    } else {
+      infoBlock.innerHTML = '';
+      infoBlock.style.display = 'none';
+    }
+  });
+});
+  
+</script>
+  </div>
+</body>
+</html>

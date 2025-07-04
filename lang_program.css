@@ -1,0 +1,521 @@
+body {
+  font-family: Calibri, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+
+.button-group button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s;
+}
+
+.button-group button:hover {
+  background-color: #555;
+}
+
+.info {
+  display: none;
+  background-color: #fff;
+  padding: 15px;
+  margin-top: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.back-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  color: #fff;
+  background-color: #333;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.back-button:hover {
+  background-color: #555;
+}
+
+
+.comparison-section {
+    display: flex;
+    align-items: flex-start;
+    padding: 20px;
+    margin-top: 30px;
+    flex-wrap: wrap; /* Позволяет колонкам переноситься на новую строку */
+}
+
+.column {
+    flex: 1; /* Позволяет колонкам занимать равное пространство */
+    min-width: 250px; /* Минимальная ширина для колонок */
+    max-width: 45%; /* Максимальная ширина для колонок */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 20px;
+    margin: 10px; /* Добавляет отступы между колонками */
+}
+
+.separator {
+    width: 1px;
+    background-color: #333;
+    height: auto;
+    margin: 0 10px;
+}
+
+/* Медиа-запрос для мобильных устройств */
+@media (max-width: 768px) {
+    .column {
+        max-width: 100%; /* Колонки занимают всю ширину на мобильных устройствах */
+    }
+    .separator {
+        display: none; /* Скрыть разделитель на мобильных устройствах */
+    }
+}
+
+.column h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.column ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+.column li {
+    margin-bottom: 10px;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+p {
+    font-size: 20px;
+    line-height: 1.6;
+    color: #555;
+}
+h4{
+   font-size: 22px;
+}
+
+ul {
+    font-family: Calibri, sans-serif; /* Настроенный шрифт */
+    font-size: 20px;
+    color: #333; /* Цвет текста */
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+li {
+    margin-bottom: 0.5rem; /* Отступ между пунктами списка */
+    padding-left: 1rem; /* Внутренний отступ */
+    position: relative;
+    font-size:20px;
+}
+
+ol {
+    font-family: Calibri, sans-serif; /* Настроенный шрифт */
+    font-size: 20px;
+    color: #333; /* Цвет текста */
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.photo {
+            text-align: center; /* Центрирование содержимого внутри элемента */
+        }
+
+.slider-container {
+  position: relative;
+  width: 80%;
+  max-width: 600px;
+  overflow: hidden;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  margin: 0 auto;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  text-align: center;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.slide p {
+  margin: 10px 0;
+  font-size: 1rem;
+  color: #333;
+}
+
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.left-btn {
+  left: 10px;
+}
+
+.right-btn {
+  right: 10px;
+}
+
+.slider-btn:focus {
+  outline: none;
+}
+
+        /* Hamburger Menu */
+        .hamburger {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 35px;
+            height: 30px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            z-index: 1001;
+            position: fixed;
+            right: 20px;
+            top: 20px;
+        }
+
+        .hamburger span {
+            width: 100%;
+            height: 4px;
+            background: black;
+            transition: all 0.3s ease;
+        }
+
+        .sidebar.active + .hamburger span {
+            background: white;
+        }
+
+        /* Sidebar Navigation */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 250px;
+            height: 100vh;
+            background: black;
+            color: white;
+            transition: right 0.5s ease;
+            padding-top: 60px;
+            z-index: 1000;
+        }
+
+        .sidebar.active {
+            right: 0;
+        }
+
+        .menu-item {
+            padding: 15px;
+            cursor: pointer;
+            border-bottom: 1px solid white;
+            font-size: 20px;
+        }
+
+        .submenu {
+            display: none;
+            background: #333;
+        }
+
+        .submenu a {
+            display: block;
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+        }
+
+        .submenu a:hover {
+            background: #444;
+        }
+
+        .intro {
+            text-align: center;
+            padding: 80px 20px 40px;
+            background: #f9f9f9;
+        }
+
+        .form-container {
+            position: absolute;
+            width: 100%;
+            height: 70vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        .form-card {
+            position: absolute;
+            width: 50%;
+            max-width: 600px;
+            min-width: 300px;
+            height: auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            opacity: 0;
+            transform: translateX(100%);
+            transition: transform 1s ease, opacity 1s ease;
+        }
+
+        .form-card.active {
+            transform: translateX(0);
+            opacity: 1;
+        }
+
+        .form-card.exit {
+            transform: translateX(-100%);
+            opacity: 0;
+        }
+a{
+		font-size: 20px;
+		}
+
+.gallery-container {
+  position: relative;
+  width: 100%;
+  max-width: 800px; /* Можно настроить под ваш дизайн */
+  background-color: #fff;
+  margin: 0 auto; /* Центрирование по горизонтали */
+  display: flex;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  flex-direction: column;
+  align-items: center; /* Центрирование содержимого по горизонтали */
+  justify-content: center; /* Центрирование содержимого по вертикали */
+}
+
+/* Окно с картинкой и текстом */
+.gallery-window {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Контейнер для картинки */
+.image-container {
+  width: 100%;
+  height: 400px; /* Фиксированная высота для картинок */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 10px;
+  background-color: #e0e0e0; /* Фон, если картинка не заполняет контейнер */
+}
+
+/* Картинка */
+.gallery-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* Сохраняет пропорции картинки */
+  display: none; /* Скрываем все картинки по умолчанию */
+}
+
+.gallery-image.active {
+  display: block; /* Показываем активную картинку */
+}
+
+/* Контейнер для текста */
+.text-container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.image-title,
+.image-description {
+  display: none; /* Скрываем все заголовки и описания по умолчанию */
+}
+
+.image-title.active,
+.image-description.active {
+  display: block; /* Показываем активные заголовок и описание */
+}
+
+.image-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.image-description {
+  font-size: 20px;
+  color: #666;
+}
+
+/* Стрелки */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+}
+
+.arrow:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev-arrow {
+  left: 10px;
+}
+
+.next-arrow {
+  right: 10px;
+}
+
+/* Оформление основного контейнера для блоков */
+.blocks {
+    display: flex;
+    justify-content: space-between; /* Расположение блоков с разнообразным расстоянием */
+    padding: 20px; /* Отступы внутри контейнера */
+    
+}
+
+/* Оформление блоков */
+.block {
+    width: 45%; /* Ширина каждого блока */
+    padding: 10px; /* Внутренний отступ в блоках */
+    
+}
+
+/* Оформление заголовков и описаний */
+.mini-title {
+    font-weight: bold; /* Жирный шрифт для заголовков */
+    margin-bottom: 15px; /* Отступ между заголовком и описанием */
+    font-size: 20px;
+    border: 2px solid black; /* Толщина и цвет рамки */
+    padding: 10px;          /* Отступы внутри рамки (по желанию) */
+    background-color: transparent; /* Заливка не нужна */
+}
+
+.description {
+    margin-bottom: 20px; /* Отступ между описаниями */
+    font-size: 20px;
+}
+
+/* Адаптивное оформление для мобильных устройств */
+@media (max-width: 768px) {
+    .block {
+        flex: 1 1 100%; /* На всю ширину на мобильных */
+        max-width: 100%;
+        margin-bottom: 20px; /* Отступ между блоками */
+    }
+    
+    .blocks {
+        padding: 10px;
+        gap: 20px;
+    }
+}
+
+.contain {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.items {
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fafafa;
+    padding: 10px;
+}
+
+.content {
+    padding: 10px;
+}
+
+code {
+    background-color: #e8e8e8;
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+
+/* Контейнер для кнопки */
+.download-container {
+  text-align: center;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Стили для кнопки */
+.download-button {
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: #000;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 50px; /* Овальная форма */
+  font-size: 18px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Эффект при наведении */
+.download-button:hover {
+  background-color: #fff;
+  color: #000;
+  border: 2px solid #000;
+}
